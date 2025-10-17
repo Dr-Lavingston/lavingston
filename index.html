@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harambee for Peter Otewa’s Heirs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #ff758c, #ff7eb3, #ffe29f, #86e3ce, #a1c4fd, #c2e9fb);
+      background-size: 400% 400%;
+      animation: bgShift 15s ease infinite;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    @keyframes bgShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Circular image container */
+    .image-container {
+      margin: 20px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,255,255,0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(255,255,255,1);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .description {
+      padding: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mpesa-number {
+      margin: 20px 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: #004aad;
+      text-shadow: 1px 1px 5px #fff;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer {
+      background-color: #004aad;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Overlay for large image */
+    .overlay {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .overlay img {
+      margin: auto;
+      display: block;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 10px;
+    }
+
+    .overlay span {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .overlay .caption {
+      color: #ffeb3b;
+      font-size: 22px;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #ffb300;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #ffb300; }
+      to   { text-shadow: 0 0 20px #fff, 0 0 30px #ff0, 0 0 40px #ffb300; }
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .confetti div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {transform: translateY(-10px) rotate(0deg);}
+      100% {transform: translateY(100vh) rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="calm_harambee.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Confetti -->
+  <div class="confetti" id="confetti"></div>
+
+  <header>Harambee for Peter Otewa’s Heirs</header>
+
+  <!-- Circular image -->
+  <div class="image-container" id="myImgContainer">
+    <img src="lavingston.jpg" alt="Lavingston Ochieng Peter">
+  </div>
+
+  <div class="description">
+    <p>
+      This page was created to support <strong>Lavingston Ochieng Peter</strong> (Student in MMUST) in raising school fees, alongside
+      <strong>Joylet Atieno</strong> (St. Gabriel Gwassi Girls) and <strong>Mike Rooney</strong> (Kisii University).
+    </p>
+    <p>
+      The Harambee will take place from <b>Wednesday, 5th November to Thursday, 20th November 2025</b>.
+      We are honoured to have <b>Hon. Leonard Ogutu</b> as our Guest of Honour.
+    </p>
+    <p>
+      Thank you all for joining and for your continued support. Asanteni sana kwa moyo wa harambee!
+    </p>
+    <p>
+      <em>“Discipline, humility, and good conduct define Lavingston’s path toward excellence.”</em>
+    </p>
+  </div>
+
+  <!-- M-Pesa Number for contribution -->
+  <div class="mpesa-number">
+    Send contributions via M-Pesa to: <strong>+254768711518</strong>
+  </div>
+
+  <footer>© 2025 Peter Otewa Family | All Rights Reserved</footer>
+
+  <!-- Overlay for large image -->
+  <div id="myOverlay" class="overlay">
+    <span onclick="closeOverlay()">&times;</span>
+    <img id="fullImage" src="">
+    <div class="caption">View Lavingston image properly</div>
+  </div>
+
+  <script>
+    // Image overlay logic
+    const container = document.getElementById("myImgContainer");
+    const overlay = document.getElementById("myOverlay");
+    const fullImage = document.getElementById("fullImage");
+
+    container.onclick = function() {
+      overlay.style.display = "block";
+      fullImage.src = this.querySelector('img').src;
+    }
+
+    function closeOverlay() {
+      overlay.style.display = "none";
+    }
+
+    // Confetti generation
+    const confetti = document.getElementById('confetti');
+    const colors = ['#ff0000', '#00ff00', '#ffff00', '#ff00ff', '#00ffff', '#ffa500', '#ff69b4']; // Christmas-style
+    for (let i = 0; i < 100; i++) {
+      const dot = document.createElement('div');
+      dot.style.left = Math.random() * 100 + 'vw';
+      dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+      dot.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      dot.style.animationDelay = Math.random() * 5 + 's';
+      dot.style.opacity = Math.random() * 0.8 + 0.2;
+      confetti.appendChild(dot);
+    }
+  </script>
+
+</body>
+</html>
